@@ -1,0 +1,25 @@
+\begin{table}[h]
+\begin{center}
+ \begin{tabular}{|| c | c | c | c ||} 
+ \hline
+ Functions & Using Array & Using Linked List & Using Max Heap \\ [0.5ex] 
+ \hline\hline
+
+ Extract\textunderscore Max(A) & $O(n)$ & $O(n)$ &  $O(log $ $n)$ \\
+ \hline
+ Maximum(A) & $O(n)$ & $O(n)$ & $O(log $ $n)$ \\
+
+ \hline
+ \hline
+\end{tabular}
+\end{center}
+\caption{Worst case Run time analysis of ExtractMax and Maximum functions}
+\end{table}
+
+As we can see from above, it is \textbf{clearly} better to use a binary heap 
+to implement a priority queue than an array or a linked list because 
+of the reduced worst case time complexity to find the element with the highest priority.
+
+Also, Binary Heaps are represented as arrays in codes, so it is not that 
+difficult to write codes using Binary Heaps.
+

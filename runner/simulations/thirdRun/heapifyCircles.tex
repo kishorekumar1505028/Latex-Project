@@ -1,0 +1,61 @@
+%Draw all nodes..
+%grid lines
+ 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.2]
+
+ 
+%grid lines done
+
+
+%Draw lines connecting nodes first
+%\subfile{Fixed/LinesHeap.tex}
+%Done drawing lines connecting nodes 
+
+\subfile{runner/simulations/thirdRun/heapLines.tex}
+
+%root
+\draw[ultra thick,fill=myOrange] (0,8.5*2) circle [radius=2.5];% i = 1, root = 4 
+
+
+%left child
+\draw[ultra thick,fill=myOrange] (-5.5*2,4*2) circle [radius=2.5];%i = 2, initially 14
+
+%right child
+\draw[ultra thick,fill=myOrange] (5.5*2,4*2) circle [radius=2.5];%i = 3, initially 7
+
+
+%left left 
+\draw[ultra thick,fill=myOrange] (-9*2, -2*2) circle [radius=2.5];%i = 4, initially 2
+
+%left right
+\draw[ultra thick,fill=myOrange] (-2*2, -2*2) circle [radius=2.5];%i = 5, initially 8
+
+
+%right left
+\draw[ultra thick,fill=myOrange] (2*2, -2*2) circle [radius=2.5];%i = 6, initially 1
+
+%right right
+\draw[ultra thick,fill=myOrange] (9*2, -2*2) circle [radius=2.5];%i = 7, initially 3
+
+\subfile{runner/simulations/thirdRun/thirdTexts.tex}
+
+
+
+\end{tikzpicture}
+\caption{After Exchanging  $i$ = 2 with $largest$ = 5}
+\end{figure}
+
+
+
+
+
+\begin{itemize}
+\item After exchanging 4 with 8,Max\textunderscore Heapify(A, 5) is called now.
+\item Now, $i$ = 5, $l$ = $2*i$ = 10 and $r$ = $2*i + 1$ = 11.
+\item As before, first we compare the key/priority of node at index $i$, and its left child $l$. 
+\item But we realize that both $l$ and $r$ are out of bounds so we stop since heap-property is satisfied.
+
+
+\end{itemize}

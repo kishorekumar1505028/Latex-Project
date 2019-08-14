@@ -1,0 +1,18 @@
+
+ 
+\begin{algorithm}[H]
+ \begin{algorithmic}[1]
+     \Function{Max-Heap-Insert}{A , key}
+     \State{$\textit{heap-size}[A] \gets \textit{heap-size}[A] + 1$}
+      \State{$A[\textit{heap-size}[A]] \gets -\infty$}
+    \State {Heap-Increase-Key $(A ,\textit{heap-size[A]}, key)$}
+     \EndFunction
+         \end{algorithmic}
+\end{algorithm}
+
+\begin{itemize}
+    \item At line 2, we simply increment the size of heap.
+    \item At Line 3, we simply insert at the last index a new node with a key of $- \infty$. 
+    \item At line 4, we call the Heap-Increase-Key on the new index i.e. at the $\textit{heap-size[A]}$ , and our $newKey$ is the $key$ of the argument of this function.
+    \item This function has the same time complexity as of Heap-Increase-Key which as found previously was at worst case $O(log n)$ if we were to go to the root.
+\end{itemize}

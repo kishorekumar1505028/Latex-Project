@@ -1,0 +1,64 @@
+For the rest of our functions and examples, we will be using Max Heap or Maximum Priority Queue. But the implementations using Minimum Priority Queue are straight forward and the priorities comparisons are just reversed.
+
+Max Heap is being used to implement Maximum Priority Interface.
+So our  Max Priority Queue Interface's  functions are now going to be overridden by Max Heap.
+
+$A$ is an array of elements which can be thought of as complete binary tree i.e. $A$ is our priority queue here. $A[1]$ is the root element.
+$A[i]$ has left child at the index of $2*i$ and has right child at the index of
+$2*i + 1$
+
+\subsection{Functions of Max Heap}
+\begin{enumerate}
+    \item \textbf{Heap-Extract-Max(A)} : Same as \textbf{ExtractMax(S)} for Priority Queue, it will return and remove the element with the highest priority in the priority queue.
+    \item \textbf{Heap-Maximum(A)}: Same as \textbf{Maximum(S)} for Priority Queue, it will just return (and not remove) the element with the highest priority in the priority queue.
+    \item \textbf{Max-Heapify(A, i)}: A function for MaxHeap which will make sure the element at the index $i$ is at the correct position with respect to its priority and if not, will put it in its correct position.
+    \item \textbf{Heap-Increase-Key(A, x, newKey)}: Same as \textbf{IncreaseKey(S, x, newKey)} of Max Priority Queue.This function increases the key of this current element and moves its place accordingly in the priority queue.
+    \item \textbf{Heap-Insert(A, key)}: Same as \textbf{Insert(S, x)} of Max Priority Queue. This function inserts the element with the given key in its correct position.
+\end{enumerate}
+
+
+\newpage
+\subsection{Pseudo-codes of functions of Max Heap}
+Here are the pseudo codes for the algorithms of the functions described above.
+%\subsubsection{Heap-Extract-Max(A)}
+
+%Pseudocode
+
+\begin{enumerate}
+ 
+
+    
+    \item \textbf{Max\textunderscore Heapify(A, i)}
+    \subfile{runner/algo/heapify.tex}
+    \subfile{runner/algo_things/maxHeapify_stuffs.tex}
+
+    \newpage 
+
+    \item \textbf{Heap-Extract-Max(A)}
+    \subfile{runner/algo/extractMax.tex}
+    \subfile{runner/algo_things/extractMax_stuffs.tex}
+    
+    \newpage 
+    
+    \item \textbf{Heap-Maximum(A)}
+    \subfile{runner/algo/heapMax.tex}
+    
+    \item \textbf{Heap-Increase-Key(A, x, newKey)}
+    \subfile{runner/algo/increaseKey.tex}
+    \subfile{runner/algo_things/increaseKeyStuffs.tex}
+    
+    \newpage
+    \item \textbf{Heap-Insert(A, newKey)}
+    \subfile{runner/algo/insert.tex}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+

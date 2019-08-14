@@ -1,0 +1,8 @@
+    \begin{itemize}
+        \item The lines 2 to 3 just check if the heap is empty or not.
+        \item The lines 4 to 6 store the maximum value in a temporary variable   \textit{max}, replaces the root with the last element ( the element with  the lowest priority ) and decrements the size of the heap.
+        \item The line 7 calls the function Max\textunderscore Heapify at the root which restores the heap property of the heap.
+        \item This function has the time complexity same as the time complexity of the function Max\textunderscore Heapify since all other lines above are 
+        executed at $O(1)$ time.
+        \item Previously we found out that Max\textunderscore Heapify takes at worst case $O(log n)$ time, so the function ExtractMax also takes $O(log n)$ time at worst case.
+    \end{itemize}

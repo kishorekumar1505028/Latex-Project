@@ -1,0 +1,40 @@
+\begin{algorithm}[H]
+ \begin{algorithmic}[1]
+    \Function{Max-Heapify}{A, i}
+    
+    %\State{$l$ $\gets 2*i$}
+    \State{$l$ $\gets LEFT(i)$}
+    
+    
+    %\State{$r$ $\gets 2*i + 1$}
+    \State{$r$ $\gets RIGHT(i)$}
+    
+    
+    \State{\textbf{if} $l\leq \textit{heap-size}[A]$ and $A[l] > A[i]$}
+
+
+    
+
+
+    \State{\hspace{10pt}\textbf{then}$ $ largest $\gets $ $l$}
+    
+    \State{\hspace{10pt}\textbf{else}$ $ largest $\gets $ $i$}
+    
+    \State{\textbf{if} $r\leq \textit{heap-size}[A]$ and $A[r] > A[i]$}
+
+
+    
+
+
+    \State{\hspace{10pt}\textbf{then} $ largest \gets r$}
+
+    
+    \State{\textbf{if} $  largest \neq i$}
+
+        \State {\hspace{10pt}\textbf{then} exchange $A[i] \leftrightarrow A[largest]$}
+
+            \State{\hspace{25pt} {Max-Heapify}(A, $largest$)}
+
+        \EndFunction
+         \end{algorithmic}
+\end{algorithm}

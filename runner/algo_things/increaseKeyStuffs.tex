@@ -1,0 +1,9 @@
+\begin{itemize}
+    \item The lines 2-3 just checks whether the new key inserted is actually bigger than the current key. If not, then there is no need to execute the function any further.
+    \item Line 4 simply sets the key of $A[i]$ as the $newKey$.
+    \item In this case ,   $PARENT(i)$  = $i/2$
+    \item Lines 5 to 6 makes sure the parent of the node at index $i$ i.e. the node at index $i/2$ has a priority bigger than the node at index $i$. If not then just swap the node of the parent with node at index $i$.
+    \item This swapping is continued until \textbf{either} node's parent has higher or equal to priority than the node itself \text{or} the node becomes the root i.e. the node with the highest priority.
+    \item In \textbf{either} case, max-heap property is maintained.
+    \item To analyze time complexity, we can see that in the worst case, the node will go to the root. So, worst case time complexity is $O(log n)$.
+\end{itemize}

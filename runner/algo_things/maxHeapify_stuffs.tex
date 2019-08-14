@@ -1,0 +1,23 @@
+
+    \begin{itemize}
+        \item Max\textunderscore Heapify is called on the index $i$. 
+        \item For this function,  $LEFT(i)$ = $2*i$ and  $RIGHT(i)$ = $2*i + 1$ .
+        \item The line 2 finds the left child's index of node at $i$ which is $2*i$ and sets it at $l$.
+        \item The line 3 finds the right child's index of node at $i$ which is $2*i + 1$ and sets it at $r$.
+        \item Lines 4 to 6 finds the index of the largest priority element between the node itself i.e. the index $i$ and its left child's index $l$ and sets it at the temporary variable $largest$. If left child does not exist then algorithm skips to line 7.
+        \item Lines 7 to 8 compares the previous largest index's priority with the right child $r$ of the node at index $i$ and sets the new largest priority element's index in the variable $largest$. If right child does not exist then algorithm skips to line 9.
+        \item If node does not have any child left, then the function gets terminated because the node at index $i$ itself has the highest priority and hence the max heap property gets satisfied.
+        \item Lines 9 to 11 checks if the element itself is the largest then heap property is satisfied so function is terminated. Otherwise we exchange the current node $A[i]$ with the node with the largest priority of both of its children $A[largest]$ and we recursively call Max\textunderscore Heapify using the index $largest$.
+    \end{itemize}
+    \newpage
+    To Analyze the time complexity of Max\textunderscore Heapify
+    \begin{itemize}
+        \item Lines 2 to 10 take $O(1)$ time to execute.
+        \item Recursive calling of the function is done. So to compute time complexity we must figure out the \textbf{maximum} number of times this function can get recursively called.
+        \item If the heap at $i$ has $n$ elements, we must figure out at most how many elements can the sub-trees at $l$ or $r$ have.
+        \item Since this is a complete binary tree, the worst case will occur when bottom row is half filled.
+        \item This means that at most number of elements in the sub-trees at $l$ or $r$ will be $\frac{2n}{3}$. 
+        \item So our recurrence relation becomes $T(n) \leqslant T(\frac{2n}{3}) + \Theta(1)$
+        \item Using substitution we can easily verify this recurrence relation yields the result $T(n) = O(log n)$
+        \item This means that at a node of height $h$, Max\textunderscore Heapify will take a time of $O(h)$.
+    \end{itemize}

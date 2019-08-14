@@ -1,0 +1,165 @@
+%Draw all nodes..
+%grid lines
+ 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.2]
+
+ 
+%grid lines done
+
+
+%Draw lines connecting nodes first
+%\subfile{Fixed/LinesHeap.tex}
+%Done drawing lines connecting nodes 
+
+\draw[ultra thick, lineColor] (0,9*2) -- (-5.5*2, 4*2);% root to left child
+
+\draw[ultra thick, lineColor] (0,9*2) -- (5.5*2, 4*2);% root to right child
+
+
+\draw[ultra thick, lineColor] (-5.5*2, 4*2) -- (-9*2, -2*2);% left to left left
+
+\draw[ultra thick, lineColor] (-5.5*2, 4*2) -- (-2*2, -2*2);% left to left right
+
+ 
+\draw[ultra thick, lineColor] (5.5*2, 4*2) -- (2*2, -2*2);% right to right left
+
+\draw[ultra thick, lineColor] (5.5*2, 4*2) -- (9*2, -2*2);% right to right right
+
+%root
+\draw[ultra thick,fill=myOrange] (0,8.5*2) circle [radius=2.5];% i = 1, root = 4 
+
+
+%left child
+\draw[ultra thick,fill=myOrange] (-5.5*2,4*2) circle [radius=2.5];%i = 2, initially 14
+
+%right child
+\draw[ultra thick,fill=myOrange] (5.5*2,4*2) circle [radius=2.5];%i = 3, initially 7
+
+
+%left left 
+\draw[ultra thick,fill=myOrange] (-9*2, -2*2) circle [radius=2.5];%i = 4, initially 2
+
+%left right
+\draw[ultra thick,fill=myOrange] (-2*2, -2*2) circle [radius=2.5];%i = 5, initially 8
+
+
+%right left
+\draw[ultra thick,fill=myOrange] (2*2, -2*2) circle [radius=2.5];%i = 6, initially 1
+
+%right right
+\draw[ultra thick,fill=myOrange] (9*2, -2*2) circle [radius=2.5];%i = 7, initially 3
+
+\node [ultra thick, color=nodeWriter] at (0,8.5*2)
+{\textbf{\Large{$14$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-5.5*2,4*2)
+{\textbf{\Large{$8$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (5.5*2,4*2)
+{\textbf{\Large{$7$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-9*2, -2*2)
+{\textbf{\Large{$2$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-2*2, -2*2)
+{\textbf{\Large{$4$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (2*2, -2*2)
+{\textbf{\Large{$1$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (9*2, -2*2)
+{\textbf{\Large{$3$}}};     %For frames 1 to 12
+
+
+\end{tikzpicture}
+\caption{Previous Heap}
+\end{figure}
+
+Now we call IncreaseKey on the node with key = 4 and we increase the key to newKey = 22.
+
+%Draw all nodes..
+%grid lines
+ 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.2]
+
+ 
+%grid lines done
+
+
+%Draw lines connecting nodes first
+%\subfile{Fixed/LinesHeap.tex}
+%Done drawing lines connecting nodes 
+
+\draw[ultra thick, lineColor] (0,9*2) -- (-5.5*2, 4*2);% root to left child
+
+\draw[ultra thick, lineColor] (0,9*2) -- (5.5*2, 4*2);% root to right child
+
+
+\draw[ultra thick, lineColor] (-5.5*2, 4*2) -- (-9*2, -2*2);% left to left left
+
+\draw[ultra thick, lineColor] (-5.5*2, 4*2) -- (-2*2, -2*2);% left to left right
+
+ 
+\draw[ultra thick, lineColor] (5.5*2, 4*2) -- (2*2, -2*2);% right to right left
+
+\draw[ultra thick, lineColor] (5.5*2, 4*2) -- (9*2, -2*2);% right to right right
+
+%root
+\draw[ultra thick,fill=myOrange] (0,8.5*2) circle [radius=2.5];% i = 1, root = 4 
+
+
+%left child
+\draw[ultra thick,fill=myOrange] (-5.5*2,4*2) circle [radius=2.5];%i = 2, initially 14
+
+%right child
+\draw[ultra thick,fill=myOrange] (5.5*2,4*2) circle [radius=2.5];%i = 3, initially 7
+
+
+%left left 
+\draw[ultra thick,fill=myOrange] (-9*2, -2*2) circle [radius=2.5];%i = 4, initially 2
+
+%left right
+\draw[ultra thick,fill=myOrange] (-2*2, -2*2) circle [radius=2.5];%i = 5, initially 8
+
+
+%right left
+\draw[ultra thick,fill=myOrange] (2*2, -2*2) circle [radius=2.5];%i = 6, initially 1
+
+%right right
+\draw[ultra thick,fill=myOrange] (9*2, -2*2) circle [radius=2.5];%i = 7, initially 3
+
+\node [ultra thick, color=nodeWriter] at (0,8.5*2)
+{\textbf{\Large{$14$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-5.5*2,4*2)
+{\textbf{\Large{$8$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (5.5*2,4*2)
+{\textbf{\Large{$7$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-9*2, -2*2)
+{\textbf{\Large{$2$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (-2*2, -2*2)
+{\textbf{\Large{$22$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (2*2, -2*2)
+{\textbf{\Large{$1$}}};     %For frames 1 to 12
+
+\node [ultra thick, color=nodeWriter] at (9*2, -2*2)
+{\textbf{\Large{$3$}}};     %For frames 1 to 12
+
+
+\end{tikzpicture}
+\caption{No longer heap-property is satisfied !}
+\end{figure}
+
+\begin{itemize}
+    \item After calling IncreaseKey, we check if node has parent, then we compare with the key of the parent.
+    \item Here 8 $<$ 22, so parent's key is smaller than node's key so we exchange the parent with the node itself.
+\end{itemize}
+

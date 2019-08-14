@@ -1,0 +1,187 @@
+\documentclass{report}
+\usepackage{subfiles}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usetikzlibrary{arrows.meta}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage[boxruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usetikzlibrary{arrows.meta}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{array}
+%Color begin
+%\definecolor{lineColor}{rgb}{0, 0.173, 0.95 }
+\definecolor{lineColor}{rgb}{0.0235, 0.941, 0.196 } %green colored line..
+\definecolor{nodeWriter}{rgb}{0, 0, 0}
+
+\definecolor{background}{rgb}{0.84, 0.92, 0.95}
+\definecolor{myCyan}{rgb}{0.11, 0.71, 0.86}
+\definecolor{myPurple}{rgb}{0.64, 0.46, 0.66}
+\definecolor{myLightPurple}{rgb}{0.835, 0.686, 0.894}
+\definecolor{myOrange}{rgb}{0.96, 0.66, 0.59}
+\definecolor{textColor}{rgb}{0.31,0.20,0.53}
+%\definecolor{lineColor}{rgb}{0.68,0.45,0.45}
+\definecolor{myRed}{rgb}{0.964, 0.172, 0.172}
+\definecolor{circleBorder}{rgb}{0.09,0.17,0.39}
+\definecolor{diameterColor}{rgb}{0.22,0.29,0.42}
+\definecolor{myLightBlue}{rgb}{0.76,0.84,0.95}
+\definecolor{myGreen}{rgb}{0.098, 0.709, 0.090}
+
+\definecolor{whiteColor}{rgb}{1,1,1}
+
+
+\definecolor{textColor}{rgb}{0.0235, 0, 0.85 }    %apatoto myGreen tai
+
+\definecolor{superScriptColor}{rgb}{0.964, 0.172, 0.172}   %apatoto myRed
+
+%Color end
+
+%begin of document
+\begin{document}
+%titlepage
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\large Bangladesh University of Engineering and Technology}\\[1.5cm] % Name of your university/college
+\textsc{\Large CSE 300}\\[0.5cm] % Major heading such as course name
+\textsc{\large Technical Writing And Presentation}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries A Report on Priority Queue}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Mahim Mahbub\\
+Kishore Kumar Dash
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Student ID:} \\
+1505022\\
+1505028% Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+    \vfill
+    \includegraphics[width=4cm]{runner/BUET.png}% also works with logo.pdf
+    \vfill
+    \vfill
+\end{titlepage}
+
+
+%introduction
+
+%runner part begins
+
+\newpage 
+
+\tableofcontents
+
+\chapter{Priority Queue}
+\section{Introduction}
+\subfile{runner/intro.tex}
+
+\newpage
+\section{What is a Priority Queue?}
+\subfile{runner/definition.tex}
+
+\newpage
+\section{Functionalities of Priority Queue}
+\subfile{runner/functionalities.tex}
+
+\newpage
+\section{How to implement Priority Queue?}
+\subfile{runner/howToImpelement.tex}
+
+\newpage
+\section{Binary Heap}
+\subfile{runner/binaryHeap.tex}
+
+\newpage
+\section{Implementation using Max Heap}
+\subfile{runner/maxHeapmaxPriorityQueue.tex}
+
+\newpage
+\section{Sample Simulations}
+Given the algorithms above, let us take a look at a few simulations of those functions.
+\subsection{Simulation for Max\textunderscore Heapify}
+
+\subfile{runner/simulations/heapify.tex}
+
+\newpage
+
+\subsection{Simulation for IncreaseKey(A, x, newKey)}
+\subfile{runner/simulations2/increaseKey.tex}
+
+\newpage
+\section{Pros and Cons of using Binary Heap to implement Priority Queue}
+\subfile{runner/prosAndCons.tex}
+
+\newpage
+\section{Conclusion}
+\subfile{runner/conclusion.tex}
+
+%runner part ends
+
+\end{document}
+
+
+
+
+
+
+

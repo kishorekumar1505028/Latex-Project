@@ -1,0 +1,8 @@
+Since it is an interface, we must implement it using basic data structures.
+\subsection{Implementing Using Array}
+First obvious choice comes to mind is array.
+If we implement it with an array, the problem comes in ExtractMax or ExtractMin function because every time we have to search the \textbf{whole} array to find the element with the highest or lowest priority. This linear searching is very expensive in array and at worst case will take the time of $O(n)$ time. Insertion and removal of elements is also expensive if we shift elements of array. 
+\subsection{Implementation Using Linked List}
+Using Linked List may solve the problem for Insertion and removal but the linear search problem will still exist and ExtractMax or ExtractMin may take a maximum of $O(n)$ time.
+\subsection{A Better Alternative}
+If we had a data structure that can ensure ExtractMax or ExtractMin functions occur in less than $O(n)$ time, it would be efficient to use that. Fortunately there exists such data structure and it is called \textbf{Binary Heap}.

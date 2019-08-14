@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+
+    \Function{Heap-Extract-Max}{A}
+    \State{\textbf{if} \textit{heap-size}$[A] < 1$}
+
+    \State{\hspace{10pt}\textbf{then error} "Heap Underflow"}
+    \State {$max \gets A[1]$}
+   
+    \State{$A[1] \gets A[\textit{heap-size}[A]]$}
+
+    \State{\textit{heap-size}$[A] \gets \textit{heap-size}[A] - 1$}
+        
+        
+    \State {Max\textunderscore Heapify($A$, 1)}
+
+    \State {\textbf{return} max}
+
+    \EndFunction
+\end{algorithmic}
+\end{algorithm}

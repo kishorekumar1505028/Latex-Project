@@ -1,0 +1,62 @@
+%Draw all nodes..
+%grid lines
+ 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.2]
+
+ 
+%grid lines done
+
+
+%Draw lines connecting nodes first
+%\subfile{Fixed/LinesHeap.tex}
+%Done drawing lines connecting nodes 
+
+\subfile{runner/simulations/firstRun/heapLines.tex}
+
+%root
+\draw[ultra thick,fill=myOrange] (0,8.5*2) circle [radius=2.5];% i = 1, root = 4 
+
+
+%left child
+\draw[ultra thick,fill=myOrange] (-5.5*2,4*2) circle [radius=2.5];%i = 2, initially 14
+
+%right child
+\draw[ultra thick,fill=myOrange] (5.5*2,4*2) circle [radius=2.5];%i = 3, initially 7
+
+
+%left left 
+\draw[ultra thick,fill=myOrange] (-9*2, -2*2) circle [radius=2.5];%i = 4, initially 2
+
+%left right
+\draw[ultra thick,fill=myOrange] (-2*2, -2*2) circle [radius=2.5];%i = 5, initially 8
+
+
+%right left
+\draw[ultra thick,fill=myOrange] (2*2, -2*2) circle [radius=2.5];%i = 6, initially 1
+
+%right right
+\draw[ultra thick,fill=myOrange] (9*2, -2*2) circle [radius=2.5];%i = 7, initially 3
+
+\subfile{runner/simulations/firstRun/firstTexts.tex}
+
+
+
+\end{tikzpicture}
+\caption{Before Heapify(A, 1) is being called.}
+\end{figure}
+
+\begin{itemize}
+\item This is not a Max Heap since root is not the one with the highest priority.
+\item So, Max\textunderscore Heapify(A, 1) is called.
+\item For first iteration, $i$ = 1, $l$ = $2*i$ = 2, $r$ = $2*i + 1$ = 3.
+\item First we compare the key/priority of node at index $i$, and its left child $l$.
+\item Since 4 $<$ 14, $largest$ $\gets$ $l$ , so $largest$ = 2.
+\item We compare $largest$ with $r$, since 14 > 7 so $largest$ is still $l$ = 2.
+\item So we must replace node at $i$ = 1, with node at $largest$ = 2, i.e. the nodes 4 and 14.
+
+\end{itemize}
+
+
+

@@ -1,0 +1,14 @@
+ 
+\begin{algorithm}[H]
+ \begin{algorithmic}[1]
+     \Function{Heap-Increase-Key}{A , i , newKey}
+      \State{\textbf{if} $newKey < A[i]$}
+       \State{\hspace{10pt}\textbf{then error} "new key is smaller than the current key"}
+     \State {$A[i] \gets newKey$}
+     \State {\textbf{while} $i>1$ and $A[Parent(i)] < A[i]$}
+     \State {\hspace{10pt}\textbf{do} exchange $A[i] \leftrightarrow A[Parent(i)]$}
+
+     \EndFunction
+         \end{algorithmic}
+\end{algorithm}
+ 
